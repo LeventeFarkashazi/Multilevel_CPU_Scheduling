@@ -10,8 +10,8 @@ public class Main {
         RRHighPrior rr = new RRHighPrior();
         SRTFLowPrior srtfl = new SRTFLowPrior();
 
-        ArrayList<Task> tasksByArrivalTime = new ArrayList<Task>();
-        ArrayList<Task> tasksByAlphabetic = new ArrayList<Task>();
+        ArrayList<Task> tasksByArrivalTime = new ArrayList<>();
+        ArrayList<Task> tasksByAlphabetic = new ArrayList<>();
 
         int ticks = 0;
 

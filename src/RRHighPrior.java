@@ -2,15 +2,15 @@ import java.util.ArrayList;
 
 public class RRHighPrior {
 
-    private int timeSlice = 2;
     private int CurrentTaskRunTime;
     public Task runningTask = null;
-    public ArrayList<Task> waitingTasks = new ArrayList<Task>();
+    public ArrayList<Task> waitingTasks = new ArrayList<>();
 
 
     public void run(){
 
         //lejárt a RR időszelet
+        int timeSlice = 2;
         if(CurrentTaskRunTime == timeSlice){
             waitingTasks.add(runningTask);
             runningTask = null;

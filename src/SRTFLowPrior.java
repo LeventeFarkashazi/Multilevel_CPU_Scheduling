@@ -2,14 +2,14 @@ import java.util.ArrayList;
 
 public class SRTFLowPrior {
     public Task runningTask = null;
-    public ArrayList<Task> waitingTasks = new ArrayList<Task>();
+    public ArrayList<Task> waitingTasks = new ArrayList<>();
 
     public void run(){
 
         //új taszkot kell betölteni
         if(runningTask == null) {
             if(waitingTasks.size()>1){
-                waitingTasks.sort(new TaskComparatorRemainingTime());
+                waitingTasks.sort(new RemainingTimeComparator());
             }
             runningTask = waitingTasks.get(0);
             waitingTasks.remove(0);
